@@ -38,19 +38,19 @@ public class CoffeeMachineTranslaterTest extends TestCase{
     	ICoffeeMachineTranslater translater =  Factory.createCoffeeMachineTranslater();
     	
     	// test 1
-    	CustomerOrder order= new CustomerOrder(DrinkEnum.TEA, Short.valueOf("1"), 0.4f);
+    	CustomerOrder order= new CustomerOrder(DrinkEnum.TEA, 0.4f,1);
     	String instructionLine = translater.translateOrderIntoInstruction(order);
     	assertTrue(instructionLine !=null && !instructionLine.isEmpty());
     	assertTrue(instructionLine.equals("T:1:0"));
     	
     	// test 2
-    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, null, 0.5f);
+    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, 0.5f,null);
     	instructionLine = translater.translateOrderIntoInstruction(order);
     	assertTrue(instructionLine !=null && !instructionLine.isEmpty());
     	assertTrue(instructionLine.equals("H::"));
     	
     	// test 3
-    	order = new CustomerOrder(DrinkEnum.COFFEE, Short.valueOf("2"), 0.6f);
+    	order = new CustomerOrder(DrinkEnum.COFFEE, 0.6f,2);
     	instructionLine = translater.translateOrderIntoInstruction(order);
     	assertTrue(instructionLine !=null && !instructionLine.isEmpty());
     	assertTrue(instructionLine.equals("C:2:0"));

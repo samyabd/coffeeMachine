@@ -20,7 +20,7 @@ public class App
     	
     	// example
     	CoffeeMachineOrderManager manager = new CoffeeMachineOrderManager();
-    	CustomerOrder order = new CustomerOrder(DrinkEnum.TEA,Short.valueOf("2"),0.4f);
+    	CustomerOrder order = new CustomerOrder(DrinkEnum.TEA,0.4f,2);
     	List<String> listInstructions = manager.consumeCustomerOrderIntoInstruction(order);
     	
     	if(!CollectionUtils.isEmpty(listInstructions))

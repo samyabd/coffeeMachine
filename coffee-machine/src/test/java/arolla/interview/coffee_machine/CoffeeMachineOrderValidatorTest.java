@@ -31,19 +31,19 @@ public class CoffeeMachineOrderValidatorTest extends TestCase{
     {
     	ICoffeeMachineOrderValidator coffeeMachineOrderValidator= Factory.createCoffeeMachineOrderValidator();
     	
-    	String retour1 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE)
+    	String retour1 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE,null)
     			, 0f);
     	assertEquals(retour1, "0.5e is missing");
     	
-    	String retour2 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE)
+    	String retour2 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE,null)
     			, 0.1f);
     	assertEquals(retour2, "0.4e is missing");
     	
-    	String retour3 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE)
+    	String retour3 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE,null)
     			, 0.5f);
     	assertEquals(retour3,null);
     	
-    	String retour4 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE)
+    	String retour4 = coffeeMachineOrderValidator.checkIfEnoughMoney(Factory.createDrink(DrinkEnum.CHOCOLATE,null)
     			, 1f);
     	assertEquals(retour4,null);
     }

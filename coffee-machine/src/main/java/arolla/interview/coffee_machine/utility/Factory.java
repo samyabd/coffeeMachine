@@ -12,7 +12,7 @@ import arolla.interview.coffee_machine.interfaces.ICoffeeMachineTranslater;
 
 public class Factory {
 
-	public static Drink createDrink(DrinkEnum drinkEnum)
+	public static Drink createDrink(DrinkEnum drinkEnum, Integer nbSugar)
 	{
 		Drink drink = null;
 		if(drinkEnum!=null)
@@ -20,13 +20,13 @@ public class Factory {
 			switch(drinkEnum)
 			{
 			case CHOCOLATE:
-				drink = new Chocolate();
+				drink = new Chocolate(nbSugar);
 				break;
 			case TEA:
-				drink = new Tea();
+				drink = new Tea(nbSugar);
 				break;
 			case COFFEE:
-				drink = new Coffee();
+				drink = new Coffee(nbSugar);
 				break;
 			default: break;
 			}

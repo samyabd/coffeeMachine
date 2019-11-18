@@ -37,13 +37,13 @@ public class CoffeeMachineOrderManagerTest extends TestCase{
     public void testCoffeeMachineManager()
     {
     	CoffeeMachineOrderManager coffeeMachineOrderManager = new CoffeeMachineOrderManager();
-    	CustomerOrder order= new CustomerOrder(DrinkEnum.TEA, Short.valueOf("1"), 0.25f);
+    	CustomerOrder order= new CustomerOrder(DrinkEnum.TEA, 0.25f,1);
     	List<String>  listInstructions = coffeeMachineOrderManager.consumeCustomerOrderIntoInstruction(order);
     	assertTrue(!CollectionUtils.isEmpty(listInstructions));
     	assertTrue(listInstructions.size()==1);
     	assertTrue(listInstructions.get(0).equals("0.15e is missing"));
     	
-    	order = new CustomerOrder(DrinkEnum.COFFEE, Short.valueOf("2"), 0.6f);
+    	order = new CustomerOrder(DrinkEnum.COFFEE, 0.6f,2);
     	listInstructions = coffeeMachineOrderManager.consumeCustomerOrderIntoInstruction(order);
     	assertTrue(!CollectionUtils.isEmpty(listInstructions));
     	assertTrue(listInstructions.size()==1);
@@ -52,13 +52,13 @@ public class CoffeeMachineOrderManagerTest extends TestCase{
     	listInstructions = coffeeMachineOrderManager.consumeCustomerOrderIntoInstruction(null);
     	assertTrue(CollectionUtils.isEmpty(listInstructions));
     	
-    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, Short.valueOf("2"), 0f);
+    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, 0f,2);
     	listInstructions = coffeeMachineOrderManager.consumeCustomerOrderIntoInstruction(order);
     	assertTrue(!CollectionUtils.isEmpty(listInstructions));
     	assertTrue(listInstructions.size()==1);
     	assertTrue(listInstructions.get(0).equals("0.5e is missing"));
     	
-    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, Short.valueOf("2"), 29f);
+    	order = new CustomerOrder(DrinkEnum.CHOCOLATE, 29f,2);
     	listInstructions = coffeeMachineOrderManager.consumeCustomerOrderIntoInstruction(order);
     	assertTrue(!CollectionUtils.isEmpty(listInstructions));
     	assertTrue(listInstructions.size()==1);

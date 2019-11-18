@@ -4,11 +4,13 @@ public abstract class Drink {
 
 	private char drinkCharCode;
 	private float price;
+	protected Integer nbSugar;
 	
-	public Drink(char drinkCharCode, float price) {
+	public Drink(char drinkCharCode, float price, Integer nbSugar) {
 		super();
 		this.drinkCharCode = drinkCharCode;
 		this.price = price;
+		this.nbSugar = nbSugar;
 	}
 	
 	public char getDrinkCharCode() {
@@ -29,6 +31,11 @@ public abstract class Drink {
 	{
 		return (givenMoney - price);
 	}
+
+	public Integer getNbSugar() {
+		return nbSugar;
+	}
+
 	
 	
 	

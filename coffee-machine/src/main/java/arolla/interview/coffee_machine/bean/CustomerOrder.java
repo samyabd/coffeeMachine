@@ -8,17 +8,14 @@ public class CustomerOrder {
 
 	
 	public CustomerOrder() {};
-	public CustomerOrder(DrinkEnum drink, Short nbSugar, float givenMoney) {
+	public CustomerOrder(DrinkEnum drink, float givenMoney, Integer nbSugar) {
 		super();
 		
-		this.drink = Factory.createDrink(drink);
-		this.nbSugar = nbSugar;
+		this.drink = Factory.createDrink(drink, nbSugar);
 		this.givenMoney = givenMoney;
 	}
 
 	private Drink drink;
-	
-	private Short nbSugar;
 	
 	private float givenMoney;
 
@@ -26,10 +23,6 @@ public class CustomerOrder {
 		return drink;
 	}
 
-	public Short getNbSugar() {
-		return nbSugar;
-	}
-	
 	public float getGivenMoney() {
 		return givenMoney;
 	}

@@ -61,9 +61,9 @@ public class CoffeeMachineTranslaterImpl implements ICoffeeMachineTranslater{
 		{
 			drinkOrder.append(order.getDrink().getDrinkCharCode());
 			drinkOrder.append(Constantes.DRINK_MAKER_PROTOCOLE_SEPARATOR);
-			if(order.getNbSugar()!=null)
+			if(order.getDrink().getNbSugar()!=null)
 			{
-				drinkOrder.append(order.getNbSugar());
+				drinkOrder.append(order.getDrink().getNbSugar());
 				drinkOrder.append(Constantes.DRINK_MAKER_PROTOCOLE_SEPARATOR);
 				drinkOrder.append(Constantes.ZERO);
 			}
