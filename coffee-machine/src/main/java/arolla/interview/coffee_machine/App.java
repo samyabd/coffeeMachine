@@ -1,31 +1,35 @@
 package arolla.interview.coffee_machine;
 
+
 import java.util.List;
 
 import org.apache.commons.collections4.CollectionUtils;
 
-import arolla.interview.coffee_machine.core.CoffeeMachineTranslater;
-import arolla.interview.coffee_machine.core.CustomerOrder;
+import arolla.interview.coffee_machine.bean.CoffeeMachineOrderManager;
+import arolla.interview.coffee_machine.bean.CustomerOrder;
 import arolla.interview.coffee_machine.enums.DrinkEnum;
 
-
 /**
- * Hello world!
+ * Example
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-    	CoffeeMachineTranslater translater =  new CoffeeMachineTranslater();
-    	CustomerOrder order = new CustomerOrder(DrinkEnum.CHOCOLATE, null, null);
-    	List<String> listInstructions = translater.translateOrderIntoInstruction(order);
+    	
+    	// example
+    	CoffeeMachineOrderManager manager = new CoffeeMachineOrderManager();
+    	CustomerOrder order = new CustomerOrder(DrinkEnum.TEA,Short.valueOf("2"),0.4f);
+    	List<String> listInstructions = manager.consumeCustomerOrderIntoInstruction(order);
+    	
     	if(!CollectionUtils.isEmpty(listInstructions))
     	{
-    		for(String line: listInstructions)
+    		for(String instruction: listInstructions)
     		{
-    			System.out.println( line );
+    			System.out.println(instruction);
     		}
+    		
     	}
     	
     	
