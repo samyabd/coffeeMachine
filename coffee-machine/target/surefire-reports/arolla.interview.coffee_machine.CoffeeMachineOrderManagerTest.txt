@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: arolla.interview.coffee_machine.CoffeeMachineOrderManagerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec <<< FAILURE!
+testCoffeeMachineManager(arolla.interview.coffee_machine.CoffeeMachineOrderManagerTest)  Time elapsed: 0.037 sec  <<< FAILURE!
+junit.framework.AssertionFailedError
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at junit.framework.Assert.assertTrue(Assert.java:27)
+	at arolla.interview.coffee_machine.CoffeeMachineOrderManagerTest.testCoffeeMachineManager(CoffeeMachineOrderManagerTest.java:68)
+

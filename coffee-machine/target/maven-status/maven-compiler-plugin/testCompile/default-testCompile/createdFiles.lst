@@ -1,1 +1,3 @@
-arolla\interview\coffee_machine\AppTest.class
+arolla\interview\coffee_machine\CoffeeMachineOrderValidatorTest.class
+arolla\interview\coffee_machine\CoffeeMachineTranslaterTest.class
+arolla\interview\coffee_machine\CoffeeMachineOrderManagerTest.class
