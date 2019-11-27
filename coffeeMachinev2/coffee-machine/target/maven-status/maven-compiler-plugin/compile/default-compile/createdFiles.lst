@@ -1,0 +1,5 @@
+arolla\interview\coffee_machine\enums\DrinkEnum.class
+arolla\interview\coffee_machine\core\CoffeeMachineTranslater.class
+arolla\interview\coffee_machine\core\CustomerOrder.class
+arolla\interview\coffee_machine\App.class
+arolla\interview\coffee_machine\utility\Constantes.class
